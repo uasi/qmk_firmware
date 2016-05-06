@@ -88,6 +88,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_ERAS KC_ALT_ERASE,
 #define KC_CLR  KC_CLEAR
 /* Japanese specific */
+#define KC_JCLN KC_QUOTE    // : (and *) key
+#define KC_JGRV KC_EQUAL    // ^ (and ~) key
+#define KC_JRBR KC_BSLASH   // ] (and }) key
+#define KC_JLBR KC_RBRACKET // [ (and {) key
+#define KC_JAT  KC_LBRACKET // @ (and `) key
 #define KC_ZKHK KC_GRAVE
 #define KC_RO   KC_INT1
 #define KC_KANA KC_INT2
