@@ -4,12 +4,15 @@
 
 #define BASE 0 // default layer
 #define SYMB 1 // symbols
+#define LFTY 2 // lefty
+
+#define ON_PRESS 1
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Keymap 1: Basic layer */
     [BASE] = KEYMAP(  // layer 0 : default
         // left hand
-        KC_ESC,         KC_1,         KC_2,   KC_3,   KC_4,        KC_5,   KC_TRNS,
+        KC_ESC,         KC_1,         KC_2,   KC_3,   KC_4,        KC_5,   TO(LFTY, ON_PRESS),
         KC_TAB,         KC_Q,         KC_W,   KC_E,   KC_R,        KC_T,   KC_TRNS,
         KC_LCTL,        KC_A,         KC_S,   KC_D,   KC_F,        KC_G,
         KC_LSFT,        KC_Z,         KC_X,   KC_C,   KC_V,        KC_B,   KC_JLBR,
@@ -53,7 +56,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS, KC_TRNS,
        KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS
-),
+    ),
+    /* Keymap 2: Lefty Layer */
+    [LFTY] = KEYMAP(
+       // left hand
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TO(BASE, ON_PRESS),
+       KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                        KC_TRNS, KC_TRNS,
+                                                 KC_TRNS,
+                               KC_TRNS, KC_TRNS, KC_TRNS,
+       // right hand
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+       KC_TRNS, KC_TRNS,
+       KC_TRNS,
+       KC_TRNS, KC_TRNS, KC_TRNS
+    ),
 };
 
 const uint16_t PROGMEM fn_actions[] = {
