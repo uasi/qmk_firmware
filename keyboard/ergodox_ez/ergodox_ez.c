@@ -44,6 +44,9 @@ void matrix_scan_kb(void) {
 
 void ergodox_blink_all_leds(void)
 {
+    // Never blink LEDs because otherwise it would repeatedly blinks while Mac is sleeping.
+    return;
+
     ergodox_led_all_off();
     ergodox_led_all_set(LED_BRIGHTNESS_HI);
     ergodox_right_led_1_on();
