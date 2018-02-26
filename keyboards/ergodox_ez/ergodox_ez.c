@@ -75,7 +75,8 @@ void matrix_init_kb(void) {
     }
 #endif
 
-    ergodox_blink_all_leds();
+    // Never blink LEDs because otherwise they would repeatedly blink while Mac is sleeping.
+    //ergodox_blink_all_leds();
 
     matrix_init_user();
 }
