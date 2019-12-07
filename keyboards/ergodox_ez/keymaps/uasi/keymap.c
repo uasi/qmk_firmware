@@ -10,7 +10,7 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Keymap 0: Base Layer */
-    [BASE] = KEYMAP(
+    [BASE] = LAYOUT_ergodox(
         // left hand
         KC_ESC,      KC_1,         KC_2,    KC_3,   KC_4,    KC_5,   TO(LFTY),
         KC_TAB,      KC_Q,         KC_W,    KC_E,   KC_R,    KC_T,   KC_TRNS,
@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_BSPC, LT(SYMB, KC_ENT)
     ),
     /* Keymap 1: Symbol Layer */
-    [SYMB] = KEYMAP(
+    [SYMB] = LAYOUT_ergodox(
        // left hand
        KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_TRNS,
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TRNS, KC_TRNS, KC_TRNS
     ),
     /* Keymap 2: Lefty Layer */
-    [LFTY] = KEYMAP(
+    [LFTY] = LAYOUT_ergodox(
        // left hand
        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TO(BASE),
        KC_TRNS, KC_TRNS, KC_UP,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
