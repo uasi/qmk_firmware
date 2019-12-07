@@ -1,3 +1,4 @@
 #!/bin/sh
 
-docker run -e keymap=uasi -e keyboard=ergodox_ez --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware
+make git-submodule
+docker run --rm -v "$PWD":/qmk_firmware qmkfm/base_container sh -c 'cd /qmk_firmware && make ergodox_ez:uasi'
